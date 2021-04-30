@@ -1,0 +1,32 @@
+<!-- ======= Pricing Section ======= -->
+<section id="pricing" class="pricing">
+    <div class="container">
+ 
+      <div class="section-title" data-aos="zoom-out">
+        <h2>Businesses </h2>
+        <p>All Businesses </p>
+      </div>
+      <% business.forEach((business) => { %>
+        
+      <div class="row">
+
+        <div class="col-lg-3 col-md-6">
+          <div class="box" data-aos="zoom-in">
+            <h3><%= business.companyName %></h3>
+            
+            <ul>
+              <li><%= business.email %> </li>
+              <li><%= business.accountType %>
+              <%# <li><%= business.biography %> </li> %> 
+              <%# <li class="na">Pharetra massa</li>
+              <li class="na">Massa ultricies mi</li> %> 
+            </ul>
+            <div class="btn-wrap">
+              <a href="<%= `/find/${business._id}/edit` %> " class="btn-buy">Edit</a>
+            </div>
+            <div class="btn-wrap">
+                <a href="<%= `/find/${business._id}/delete` %> " class="btn-buy">Delete</a>
+              </div>
+          </div>
+        </div>
+        <% }) %> 

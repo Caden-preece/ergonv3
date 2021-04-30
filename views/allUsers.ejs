@@ -1,0 +1,32 @@
+<!-- ======= Pricing Section ======= -->
+<section id="pricing" class="pricing">
+    <div class="container">
+ 
+      <div class="section-title" data-aos="zoom-out">
+        <h2>Users </h2>
+        <p>All Users </p>
+      </div>
+      <% user.forEach((user) => { %>
+        
+      <div class="row">
+
+        
+          <div class="box" data-aos="zoom-in">
+            <h3><%= user.fullName %></h3>
+            
+            <ul>
+              <li><%= user.email %> </li>
+              <li><%= user.accountType %>
+              <%# <li> business.biography </li> %> 
+              <%# <li class="na">Pharetra massa</li>
+              <li class="na">Massa ultricies mi</li> %> 
+            </ul>
+            <div class="btn-wrap">
+              <a href="<%= `/find/${user._id}/edit` %> " class="btn-buy">Edit</a>
+            </div>
+            <div class="btn-wrap">
+                <a href="<%= `/find/${user._id}/delete` %> " class="btn-buy">Delete</a>
+              </div>
+          </div>
+        </div>
+        <% }) %> 
