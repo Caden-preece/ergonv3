@@ -74,6 +74,12 @@
               <li><a href="#">Drop Down 4</a></li>
             </ul> %>
           </li>
+          <% if (currentUser) { %> 
+          <% if (currentUser.isAdmin) {  %> 
+            <li><a class="nav-link scrollto" href="/allUsers">All Users </a></li>
+            <li><a class="nav-link scrollto" href="/allBusinesses">All Businesses </a></li>
+
+            <% }} %> 
           <% if (loggedIn) { %>
             <li> <a href="/profile" class = "nav-link scrollto active" ><span><%= currentUser.fullName %></span> </a>
                  <ul>
